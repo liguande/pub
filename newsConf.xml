@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <node name="">
+        <url>http://roll.news.sina.com.cn/s/channel.php?ch=01#col=89&amp;spec=&amp;type=&amp;ch=01&amp;k=&amp;offset_page=0&amp;offset_num=0&amp;num=60&amp;asc=&amp;page=</url>
+        <listUrl>//div[@id="d_list"]//ul//li/span[@class="c_tit"]/a/@href</listUrl>
+        <title>//title/text()</title>
+        <postDate>//div[@id="d_list"]//ul//li/span[@class="c_time"]//text()</postDate>
+        <source>新浪新闻</source>
+        <page>page=1</page>
+        <content>//div[@id="artibody"]//text()</content>
+    </node>
+</root>

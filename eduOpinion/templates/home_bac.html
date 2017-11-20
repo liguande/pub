@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>社媒数据实时分析</title>
+
+        <link rel="shortcut icon" href="//static.datastory.com.cn/business/cube/assets/images/ds.ico?max_age=600">
+        <link rel="Bookmark" href="//static.datastory.com.cn/business/cube/assets/images/ds.ico?max_age=600">
+
+    <link rel="stylesheet" type="text/css" href="//static.datastory.com.cn/business/cube/assets/css/bootstrap.min.css?max_age=999999">
+    <link rel="stylesheet" type="text/css" href="//static.datastory.com.cn/business/cube/build/board.css?max_age=600">
+</head>
+<body>
+<div class="container-fluid V-container">
+    <div class="row V-header">
+        <div class="col-xs-12">
+            <h1>社媒数据实时分析</h1>
+        </div>
+    </div>
+    <div class="row V-row-1">
+        <div class="col-xs-12">
+            <div class="M-panel M-panel-1">
+                <div class="panel-head">
+                    <span class="title">声量&舆情趋势</span>
+                </div>
+                <div class="panel-body">
+                    <div class="M-chart-cnt chart-yuqin" id="j-chart-trend">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row V-row-2">
+        <div class="col-xs-3" style="padding-right: 10px;width: 24%;">
+            <div class="M-panel M-panel-2">
+                <div class="panel-head">
+                    <span class="title">热词</span>
+                </div>
+                <div class="panel-body">
+                    <div class="M-chart-cnt" id="j-chart-hot-word">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-6" style="padding: 0 0;width: 54%;">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="M-input-search">
+
+
+                                <input type="text" data-user="10872" data-content="10871" class="form-control M-input-search input" id="j-input-search" value="迪士尼">
+
+
+
+                        <span class="btn-search" id="j-btn-search"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row V-center-zone">
+                <div class="col-xs-7" style="padding-right: 10px;">
+                    <div class="M-panel M-panel-3">
+                        <div class="panel-head">
+                            <span class="title">用户画像</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="M-chart-cnt" id="j-chart-persona">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-5" style="padding-left: 0;">
+                    <div class="M-panel M-panel-4">
+                        <div class="panel-head">
+                            <span class="title">地域分布</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="M-chart-cnt" id="j-chart-map">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-3" style="padding-left: 10px;width: 22%;">
+            <div class="M-panel M-panel-5">
+                <div class="panel-head">
+                    <span class="title">话题人群KOL</span>
+                </div>
+                <div class="panel-body">
+                    <div class="M-chart-cnt V-chart-kol" id="j-chart-kol">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footed-->
+
+
+
+
+<script type="text/javascript" src="//static.datastory.com.cn/business/cube/assets/js/jquery-2.1.4.min.js?max_age=999999"></script>
+<!--[if lte IE 9]>
+<script type="text/javascript" src="//static.datastory.com.cn/business/cube/js/libs/placeholder.min.js?max_age=999999"></script>
+<![endif]-->
+
+<script id="DS_PRE_JS" type="text/javascript" src="//tongji.datastory.com.cn/resources/javascripts/pre-ds-min.js?dsTid=76548d07-00d8-4bcb-85b8-f9e0967944ea"></script>
+
+<script>
+setTimeout(function(){
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?60d8dd1e2b89918832417d95d185b163";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+},0)
+</script>
+
+<script src="//static.datastory.com.cn/business/cube/build/board.js?max_age=600"></script>
+</body>
+</html>
