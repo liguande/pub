@@ -1,0 +1,53 @@
+{% extends 'application.html' %}
+{% block nav-side %}
+	<nav class="navbar-default navbar-side" role="navigation">
+	    <div class="sidebar-collapse">
+	        <ul class="nav" id="main-menu">
+		        <li><a href="#" class="active-menu"><i class="fa fa-bookmark"></i>项目一</a></li>
+	        </ul>
+	    </div>
+   	</nav>
+{% endblock %}
+{% block page-wrapper %}
+	<div class="header">
+	    <h1 class="page-header">
+	        项目一 <small>新增分析对象</small>
+	    </h1>
+	    <ol class="breadcrumb">
+			<li><a href="{% url 'index' %}">主页</a></li>
+			<li><a href="{% url 'setting' %}">数据配置</a></li>
+			<li class="active">新增分析对象</li>
+		</ol>
+	</div>
+	<div id="page-inner">
+		<div class="panel panel-default">
+		  	<div class="panel-body">
+			  	<form action=""></form>
+			  	<div class="input-group">
+				    <div class="input-group-addon"><i class="fa fa-clock-o"></i></div>
+				    <input type="text" class="form-control" id="time" placeholder="数据覆盖时间段">
+			    </div>
+		  	</div>
+		</div>
+	</div>
+<script>
+	$(document).ready(function() {
+		$("#sideNav").click(function(){
+			if($(this).hasClass('closed')){
+				$('.navbar-side').animate({left: '0px'});
+				$(this).removeClass('closed');
+				$('#page-wrapper').animate({'margin-left' : '260px'});
+				
+			}
+			else{
+			    $(this).addClass('closed');
+				$('.navbar-side').animate({left: '-260px'});
+				$('#page-wrapper').animate({'margin-left' : '0px'}); 
+			}
+		});
+	});
+</script>
+{% endblock %}
+
+
+

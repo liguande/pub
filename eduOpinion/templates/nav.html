@@ -15,6 +15,9 @@
     </div>
 	{% if request.session.username %}
         <ul class="nav navbar-top-links navbar-right">
+            <li>
+                <a href="{% url 'setting' %}"><i class="fa fa-info"> 数据配置</i></a>
+            </li>
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
                     <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>

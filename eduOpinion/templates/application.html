@@ -17,17 +17,28 @@
     <!-- Google Fonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="/static/js/Lightweight-Chart/cssCharts.css">
+    <!-- jQuery Js -->
+    <script src="/static/js/jquery-1.10.2.js"></script>
 </head>
 <body>
 	{% block nav %}
 		{% include 'nav.html' %}
 	{% endblock %}
-	{% block main-body %}默认body{% endblock %}
+	{% block main-body %}
+	<div id="wrapper">
+		{% block nav-side %}
+			{% include 'nav-side.html' %}
+		{% endblock %}
+		<div id="page-wrapper">
+			{% block page-wrapper %}
+			{% endblock %}
+		</div>
+	</div>
+	{% endblock %}
 	{% block footer %}默认底部{% endblock %}
 
 	<!-- JS Scripts-->
-    <!-- jQuery Js -->
-    <script src="/static/js/jquery-1.10.2.js"></script>
+
     <!-- Bootstrap Js -->
     <script src="/static/js/bootstrap.min.js"></script>
 
@@ -45,10 +56,28 @@
 
     <!-- Custom Js -->
     <script src="/static/js/custom-scripts.js"></script>
-
+	 <!-- init -->
+    <script>
+    	$(document).ready(function () {
+			$("#sideNav").click(function(){
+				if($(this).hasClass('closed')){
+					$('.navbar-side').animate({left: '0px'});
+					$(this).removeClass('closed');
+					$('#page-wrapper').animate({'margin-left' : '260px'});
+					
+				}
+				else{
+				    $(this).addClass('closed');
+					$('.navbar-side').animate({left: '-260px'});
+					$('#page-wrapper').animate({'margin-left' : '0px'}); 
+				}
+			});
+	    });
+    </script>
 
     <!-- Chart Js -->
     <script type="text/javascript" src="/static/js/Chart.min.js"></script>
     <script type="text/javascript" src="/static/js/chartjs.js"></script>
+   
 </body>
 </html>

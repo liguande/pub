@@ -24,5 +24,8 @@ urlpatterns = [
     url(r'^login/$',eduOpinion_views.login,name="login"),
     url(r'^logOut/$',eduOpinion_views.logOut,name="logOut"),
     url(r'^index/$', eduOpinion_views.index, name='index'),
+    url(r'^setting/$',eduOpinion_views.setting,name="setting"),
+    url(r'^addObject/$',eduOpinion_views.addObject,name="addObject"),
+    url(r'^data/$',eduOpinion_views.data,name="data"),
     url(r'^admin/', admin.site.urls),
 ]

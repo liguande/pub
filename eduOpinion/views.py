@@ -2,12 +2,15 @@
 from django.shortcuts import render,redirect
 from eduOpinion.models import User
 
+#first-page
 def home(request):
 	if request.session.get('username'):
 		return redirect('/index/')
 	else:
 		return render(request, 'home.html')
 
+
+#user
 def createUser(request):
 	if request.session.get('username'):
 		return redirect('/index/')
@@ -35,6 +38,7 @@ def login(request):
 				return redirect('/')
 		else:
 			return redirect('/')
+
 def logOut(request):
 	try:
 		del request.session['username']
@@ -42,6 +46,22 @@ def logOut(request):
 		pass
 	return redirect('/')
 
+#pages
+#主页
 def index(request):
     return render(request, 'index.html')
+
+#数据配置
+def setting(request):
+	return render(request, 'setting.html')
+
+#增加数据对象
+def addObject(request):
+	return render(request, 'addObject.html')
+
+#数据大屏
+def data(request):
+	return render(request,'data.html')
+
+
 

@@ -1,0 +1,95 @@
+{% extends 'application.html' %}
+{% block nav-side %}
+	<nav class="navbar-default navbar-side" role="navigation">
+	    <div class="sidebar-collapse">
+	        <ul class="nav" id="main-menu">
+		        <li><a href="#" class="active-menu"><i class="fa fa-bookmark"></i>项目一</a></li>
+	        	<li><a href="#" class="add"><i class="fa fa-plus"></i>添加项目</a></li>
+	        </ul>
+	    </div>
+   	</nav>
+{% endblock %}
+{% block page-wrapper %}
+	<div class="header">
+	    <h1 class="page-header">
+	        项目一 <small>数据配置</small>
+	        <a href="{% url 'addObject' %}" class="btn btn-danger"><i class="fa fa-plus"></i> 增加分析对象</a>
+	    </h1>
+	    <ol class="breadcrumb">
+			<li><a href="{% url 'index' %}">主页</a></li>
+			<li class="active">数据配置</li>
+		</ol>
+	</div>
+	<div id="page-inner">
+		<div>
+
+		 	<!-- Nav tabs -->
+		  	<ul class="nav nav-tabs" role="tablist">
+		    	<li role="presentation" class="active"><a href="#home" class="active-menu" aria-controls="home" role="tab" data-toggle="tab"><i class="fa fa-book"></i>分析对象（1）</a></li>
+		    	<!-- <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+		    	<li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+		    	<li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li> -->
+		  	</ul>
+
+		  	<!-- Tab panes -->
+		  	<div class="tab-content">
+		    	<div role="tabpanel" class="tab-pane active" id="home">
+		    		<table class="table table-striped">
+					<thead>
+						<th><input id="check" type="checkbox"></th>
+						<th>分析对象名</th>
+						<th>关键词规则</th>
+						<th>数据覆盖时段</th>
+						<th>当前数据量</th>
+						<th>状态</th>
+						<th>操作</th>
+					</thead>
+					<tbody>
+						<tr class="table-tr">
+							<td><input id="check" type="checkbox"></td>
+							<td>双一流</td>
+							<td>包含：双一流 包含二级：教育 不包含：</td>
+							<td>11/01-11/08</td>
+							<td>已消耗2,000</td>
+							<td><span class="btn btn-success"><i class="fa fa-check-circle-o"></i>完成任务</span></td>
+							<td><a href=""><i class="fa fa-trash-o"></i></a> </td>
+						</tr>
+					</tbody>
+					</table>
+		    	</div>
+		    	<!-- <div role="tabpanel" class="tab-pane" id="profile">...</div>
+		    	<div role="tabpanel" class="tab-pane" id="messages">...</div>
+		    	<div role="tabpanel" class="tab-pane" id="settings">...</div> -->
+		  	</div>
+
+		</div>
+	</div>
+<style>
+	.table > tbody > tr > td{
+		vertical-align: middle;
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$(".add").click(function() {
+			$(this).parents(".nav").append('<li><a href="" class="add"><i class="fa fa-plus"></i>添加项目</a></li>')
+		});
+		$("#sideNav").click(function(){
+			if($(this).hasClass('closed')){
+				$('.navbar-side').animate({left: '0px'});
+				$(this).removeClass('closed');
+				$('#page-wrapper').animate({'margin-left' : '260px'});
+				
+			}
+			else{
+			    $(this).addClass('closed');
+				$('.navbar-side').animate({left: '-260px'});
+				$('#page-wrapper').animate({'margin-left' : '0px'}); 
+			}
+		});
+	});
+</script>
+{% endblock %}
+
+
+
